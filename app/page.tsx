@@ -1,6 +1,5 @@
 import Container from "./components/Container";
 import PostPreview from "./components/PostPreview";
-import Test from "./components/Test";
 
 export default function Home() {
   return (

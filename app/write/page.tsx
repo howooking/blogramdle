@@ -12,12 +12,12 @@ export default function Write() {
     <Container>
       <div className='flex h-[500px] gap-5'>
         <div className='flex-[5]'>
-          <ReactQuill
+          {/* <ReactQuill
             theme='snow'
             value={contentsInput}
             onChange={setContentsInput}
             className='text-editor-height'
-          />
+          /> */}
         </div>
         <div className='flex-[2] bg-slate-200'>전송, 이미지업로드</div>
       </div>
