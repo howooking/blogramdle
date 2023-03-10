@@ -5,16 +5,10 @@ import { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
 
 export default function Write() {
-  const [contentsInput, setContentsInput] = useState("");
-  // const [mounted, setMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
-
-  // if (mounted) {
   const ReactQuill =
     typeof window === "object" ? require("react-quill") : () => false;
+  const [contentsInput, setContentsInput] = useState("");
+  console.log(contentsInput);
   return (
     <Container>
       <div className='flex h-[500px] gap-5'>
@@ -31,7 +25,3 @@ export default function Write() {
     </Container>
   );
 }
-//   else {
-//     <>Loading</>;
-//   }
-// }
