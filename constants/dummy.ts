@@ -1,15 +1,15 @@
-type PostType = {
+export type PostType = {
   id: string;
   createdAt: string;
-  image: string;
   updatedAt: string;
   title: string;
+  image: string;
   contents: string;
   address: string;
   author: string;
 };
 
-const DUMMY_POSTS: Array<PostType> = [
+export const DUMMY_POSTS: Array<PostType> = [
   {
     id: "1",
     address: "서울",

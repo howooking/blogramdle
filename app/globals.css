@@ -9,3 +9,7 @@
 .main-img-ratio {
   aspect-ratio: 4 / 1;
 }
+
+.aspect-img {
+  aspect-ratio: 3 / 2;
+}

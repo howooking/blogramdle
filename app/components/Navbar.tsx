@@ -8,8 +8,10 @@ import { NAV_ITEMS } from "@/constants/navItems";
 
 export default function Navbar() {
   const [isLoggedin, setIsLoggedin] = useState<boolean>(false);
+  const login = () => setIsLoggedin(true);
+  const logout = () => setIsLoggedin(false);
   return (
-    <header className='bg-transparent p-2'>
+    <header className='select-none p-2'>
       <Container>
         <div className='flex items-center justify-between px-2'>
           <div className='flex flex-1 gap-5'>
@@ -25,10 +27,12 @@ export default function Navbar() {
           <div className='flex flex-1 items-center'>
             <div className='ml-auto'>
               {isLoggedin ? (
-                <LoginProfile />
+                <LoginProfile logout={logout} />
               ) : (
                 <div className='ml-auto flex gap-5 uppercase'>
-                  <div>Login</div>
+                  <div onClick={login} className='cursor-pointer'>
+                    Login
+                  </div>
                   <Link href='/contact'>contact</Link>
                 </div>
               )}
