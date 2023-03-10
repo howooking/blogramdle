@@ -1,3 +1,11 @@
+export type Comment = {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  contents: string;
+  author: string;
+};
+
 export type PostType = {
   id: string;
   createdAt: string;
@@ -7,6 +15,7 @@ export type PostType = {
   contents: string;
   address: string;
   author: string;
+  comments: string[];
 };
 
 export const DUMMY_POSTS: Array<PostType> = [
@@ -21,6 +30,7 @@ export const DUMMY_POSTS: Array<PostType> = [
     title: "맛있는 피자",
     createdAt: "2023-03-01 11:47:49.164",
     updatedAt: "2023-03-01 11:48:09.165",
+    comments: ["맛있어보인다.", "가격은 얼마에요?"],
   },
   {
     id: "2",
@@ -33,6 +43,7 @@ export const DUMMY_POSTS: Array<PostType> = [
     title: "맛있는 스테이크",
     createdAt: "2023-03-01 11:47:49.164",
     updatedAt: "2023-03-01 11:48:09.165",
+    comments: ["맛있어보인다.", "가격은 얼마에요?"],
   },
   {
     id: "3",
@@ -45,6 +56,7 @@ export const DUMMY_POSTS: Array<PostType> = [
     title: "맛있는 삼겹살",
     createdAt: "2023-03-01 11:47:49.164",
     updatedAt: "2023-03-01 11:48:09.165",
+    comments: ["맛있어보인다.", "가격은 얼마에요?"],
   },
   {
     id: "4",
@@ -57,5 +69,6 @@ export const DUMMY_POSTS: Array<PostType> = [
       "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
     createdAt: "2023-03-01 11:47:49.164",
     updatedAt: "2023-03-01 11:48:09.165",
+    comments: ["맛있어보인다.", "가격은 얼마에요?"],
   },
 ];

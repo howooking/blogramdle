@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
 .main-bg {
   background-image: url("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-img-ratio {
@@ -12,4 +22,13 @@
 
 .aspect-img {
   aspect-ratio: 3 / 2;
+}
+
+.text-editor-height {
+  height: calc(100% - 42.02px);
+}
+
+/* disable scroll when drawer is opened*/
+.drawer-open {
+  overflow: hidden;
 }
