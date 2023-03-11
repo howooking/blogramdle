@@ -14,7 +14,7 @@ export default function PostPreviewCard({
   return (
     <Link
       href={`/posts/${id}`}
-      className='transition-all duration-200 ease-in-out hover:-translate-y-1 hover:opacity-90'
+      className='transition-all duration-200 ease-in-out hover:opacity-80'
     >
       <div className='flex h-[150px] overflow-hidden rounded-3xl bg-white shadow-lg sm:h-[200px]'>
         <div className='relative flex-[1]'>

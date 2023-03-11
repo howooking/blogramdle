@@ -71,21 +71,24 @@ export default function Navbar() {
           <div
             className={
               openDrawer
-                ? "absolute inset-0 z-20 flex h-screen w-full items-center justify-center bg-black/90 duration-300 ease-in sm:hidden"
-                : "absolute top-0 bottom-0 left-[100%] right-0 z-20 flex h-screen w-full items-center justify-center bg-black/90 duration-300 ease-in sm:hidden"
+                ? "absolute inset-0 z-20 flex h-screen w-full items-center justify-center bg-black/90 opacity-100 transition-opacity duration-500 ease-in-out sm:hidden"
+                : "opacity-0 transition-opacity duration-500 ease-in-out"
             }
             onClick={handleDrawer}
           >
-            <nav className='flex flex-col items-center gap-10 '>
+            <nav
+              className={`${
+                openDrawer ? "" : "hidden"
+              } flex flex-col items-center gap-10`}
+            >
               {NAV_ITEMS.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
-                  className='text-3xl font-bold text-white hover:text-accent'
-                  onClick={handleDrawer}
+                  className='text-3xl font-bold text-white hover:text-primary'
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
